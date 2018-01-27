@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: bfb2da9f9233750b759764f648207ad651eaeebc044b37fdbd1ca14f58462594
+-- hash: b81f2c8830cd0bfc8a7c9dd791da2834c3ba1b455ee350e732e02da34a0761cd
 
 name:           hs-practice
 version:        0.1.0.0
@@ -18,13 +18,15 @@ cabal-version:  >= 1.10
 extra-source-files:
     README.md
 
-executable hs-practice
-  main-is: Main.hs
+library
   hs-source-dirs:
       src
   build-depends:
       base >=4.7 && <5
+  exposed-modules:
+      Histo
   other-modules:
+      Main
       Paths_hs_practice
   default-language: Haskell2010
 
