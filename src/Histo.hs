@@ -51,3 +51,9 @@ solveFib' i = fib !! i
   where
     fib = 0 : 1 : zipWith(+) fib (tail fib) 
   
+
+naiveFib 1 = 1
+naiveFib 2 = 2
+naiveFib n = naiveFib (n-1) + naiveFib (n-2)
+
+  
