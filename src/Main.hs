@@ -47,7 +47,7 @@ fibCVAlgebra (I i attr) = attribute attr + (attribute .wkr. hole) attr
 
 solveFib i = histo fibCVAlgebra (n2one i)
 
-solveFib' i = fib !! (i + 1 )
+solveFib' i = fib !! i
   where
     fib = 0 : 1 : zipWith(+) fib (tail fib) 
   
