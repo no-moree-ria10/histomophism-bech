@@ -15,4 +15,16 @@ executable:
   main:        Main.hs
 
 
+benchmarks:
+  {{ name }}-benchmarks:
+    source-dirs: benchmark
+    main: Main.hs
+    dependencies:
+    - base
+    - {{ name }}
+    - criterion
+    ghc-options:
+    - -rtsopts
+    - -threaded
+    - -with-rtsopts=-N
 
