@@ -2,7 +2,7 @@
 --
 -- see: https://github.com/sol/hpack
 --
--- hash: 05ce53a95e655c56e4737f499339c82163565e0e2959c3c5d011a78dc200ca82
+-- hash: bfb2da9f9233750b759764f648207ad651eaeebc044b37fdbd1ca14f58462594
 
 name:           hs-practice
 version:        0.1.0.0
@@ -24,6 +24,20 @@ executable hs-practice
       src
   build-depends:
       base >=4.7 && <5
+  other-modules:
+      Paths_hs_practice
+  default-language: Haskell2010
+
+benchmark criterion-benchmarks
+  type: exitcode-stdio-1.0
+  main-is: Main.hs
+  hs-source-dirs:
+      benchmark
+  ghc-options: -rtsopts -threaded -with-rtsopts=-N
+  build-depends:
+      base
+    , criterion
+    , hs-practice
   other-modules:
       Paths_hs_practice
   default-language: Haskell2010

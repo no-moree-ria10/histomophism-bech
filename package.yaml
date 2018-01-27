@@ -10,18 +10,19 @@ extra-source-files:
 dependencies:
 - base >=4.7 && <5
 
-executable:
+library:
   source-dirs: src
-  main:        Main.hs
+  exposed-modules:
+  - Histo
 
 
 benchmarks:
-  {{ name }}-benchmarks:
+  criterion-benchmarks:
     source-dirs: benchmark
     main: Main.hs
     dependencies:
     - base
-    - {{ name }}
+    - hs-practice
     - criterion
     ghc-options:
     - -rtsopts
